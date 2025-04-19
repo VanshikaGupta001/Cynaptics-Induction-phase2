@@ -9,15 +9,16 @@ class TrialState(BaseModel):
     case: str
     phase: str = "opening"
 
+defense = CourtroomAgent("Defense", DEFENSE_SYSTEM)
+prosecution = CourtroomAgent("Prosecution", PROSECUTION_SYSTEM)
+judge = CourtroomAgent("Judge", JUDGE_SYSTEM)
+plaintiff = CourtroomAgent("Plaintiff", PLAINTIFF_SYSTEM)
+defendant = CourtroomAgent("Defendant", DEFENDANT_SYSTEM)
+
 
 # === Graph Building ===
 def build_trial_graph(case_background: str):
-    defense = CourtroomAgent("Defense", DEFENSE_SYSTEM)
-    prosecution = CourtroomAgent("Prosecution", PROSECUTION_SYSTEM)
-    judge = CourtroomAgent("Judge", JUDGE_SYSTEM)
-    plaintiff = CourtroomAgent("Plaintiff", PLAINTIFF_SYSTEM)
-    defendant = CourtroomAgent("Defendant", DEFENDANT_SYSTEM)
-
+    
     agents = [defense, prosecution, judge, defendant] 
 
     def opening(state: TrialState) -> TrialState:
