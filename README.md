@@ -1,11 +1,11 @@
 # AGENTS OF JUSTICE
-This project is an AI-driven courtroom simulation system using Groq API, LLaMA, and Gradio. This project simulates a courtroom trial with autonomous legal agents representing the Judge, Defense Lawyer, and Prosecution Lawyer. Built with fast reasoning, real-time interaction, and modularity for scalability.
+This project is an AI-driven courtroom simulation system using Groq API, LLaMA, and Gradio. This project simulates a courtroom trial with autonomous legal agents representing the Judge, Defense Lawyer and Prosecution Lawyer. Built with fast reasoning, real-time interaction, and modularity for scalability.
 
     # OVERVIEW
 This project simulates a courtroom environment where multiple autonomous agents play roles such as the Judge, Lawyers, Defendent , Plaintiff and witness. These agents communicate and make decisions based on their individual prompts, using the Groq API to interface with the LLaMA model( llama3-8b-8192) for real-time reasoning.
 
     # FEATURES
-1> Multi-Agent System: Independent agents for Judge, Defense Lawyer, and Prosecution Lawyer.
+1> Multi-Agent System: Independent agents for Judge, Defense Lawyer, DEfendant, Plaintiff and Prosecution Lawyer.
 
 2> Gradio Interface: User-friendly web UI for trial initiation and interaction.
 
@@ -25,29 +25,29 @@ Edit
 courtroom-sim/
 │
 ├── agents/                      # Contains agent logic
-│   ├── judge.py             
-│   ├── defense_lawyer.py        
-│   ├── prosecution_lawyer.py   
+│   ├── base_agent.py             
+│   ├── witness.py           
 
 │
-├── prompts/                     # Stores prompt templates for agents
+├── config/                     # Stores prompt templates for agents
 │   └── prompts.py
+│   └── env.py
+│   └──utils.py
 
 │
-├── utils/                       # Utility functions (e.g., API client, logging)
-│   └── api_client.py
+├── trial.py                       # LangGraph flow logic
+├── file.py                        # To preprocess the cses.csv file into cases_meaningful_sentences.csv
 
 │
-├── graphs/                       # LangGraph flow logic
-│   └── trial_flow.py      
-
-│
-├── main.py                      # Main entry point with Gradio UI
+├── app.py                      # Main entry point with Gradio UI
 ├── requirements.txt             # List of dependencies
 └── README.md                    # Project documentation
 
+│
+├── processed_data.csv            
+├── cases.csv
 
-     Key Components:
+  Key Components:
 1. Agents: Each agent is a Python module with specific behavior and prompts that simulate legal roles.
    
 2.Prompts: Templates stored in prompts/ that define how each agent interacts and responds. These can be customized to suit different case scenarios.
@@ -64,8 +64,8 @@ courtroom-sim/
   # IMPLEMENTATION
 1. Clone the Repository
 
-"git clone https://github.com/yourusername/courtroom-sim.git"
-cd courtroom-sim
+"git clone https://github.com/VanshikaGupta001/Cynaptics-Induction-phase2.git"
+
 
 2. Create a Virtual Environment
 
@@ -82,8 +82,8 @@ Create a .env file and add the following:
 GROQ_API_KEY=your_groq_api_key
 
 5. Run the Application
-python main.py
-Visit http://127.0.0.1:7860 to interact with the simulation.
+python app.py
+
 
 # Scope for Improvement
 1. Witness Agent Integration:
