@@ -103,3 +103,6 @@ Use vector-based memory storage (like FAISS or other vector databases) to store 
 5. Better Case Upload/Parsing:
 Allow users to upload case files (PDF, DOCX) and parse them into structured data to drive the trial simulation.
 
+Made by:
+Vanshika Gupta 
+Ketki Patil
