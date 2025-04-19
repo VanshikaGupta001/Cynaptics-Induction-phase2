@@ -36,7 +36,7 @@ courtroom-sim/
 
 │
 ├── trial.py                       # LangGraph flow logic
-├── file.py                        # To preprocess the cses.csv file into cases_meaningful_sentences.csv
+├── file.py                        # To preprocess the cases.csv file 
 
 │
 ├── app.py                      # Main entry point with Gradio UI
