@@ -1,7 +1,7 @@
 import csv
 import sys
 
-csv.field_size_limit(10**9)
+# csv.field_size_limit(10**9)  #if required in case of overfow error 
 
 def load_case(serial_no):
     with open('processed_data.csv', newline='', encoding='utf-8') as csvfile:
