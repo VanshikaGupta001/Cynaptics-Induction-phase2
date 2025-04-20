@@ -5,7 +5,8 @@ import io
 import sys
 
 def simulate_case(case_no):
-    case = load_case(case_no)
+    case_row = load_case(case_no)
+    case= case_row["Case Details"]
     if not case:
         return "Case not found..."
 
