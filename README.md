@@ -17,34 +17,38 @@ This project simulates a courtroom environment where multiple autonomous agents 
 
 6> Interactive Simulation: Users can observe or influence courtroom discussions.
 
+
+
+
   #  Architecture
 Folder Structure
 bash
 Copy
 Edit
-courtroom-sim/
+
+
+courtroom-sim<br>
 │
-├── agents/                      # Contains agent logic
-│   ├── base_agent.py             
+├── agents/                            # Contains agent logic <br>
+│   ├── base_agent.py            
 │   ├── witness.py           
 
 │
-├── config/                     # Stores prompt templates for agents
-│   └── prompts.py
-│   └── env.py
+├── config/                     # Stores prompt templates for agents and env<br>
+│   └── prompts.py<br>
+│   └── env.py<br>
 │   └──utils.py
 
-│
-├── trial.py                       # LangGraph flow logic
-├── file.py                        # To preprocess the cases.csv file 
 
-│
-├── app.py                      # Main entry point with Gradio UI
-├── requirements.txt             # List of dependencies
-└── README.md                    # Project documentation
+├── trial.py                       # LangGraph flow logic<br>
+├── file.py                        # To preprocess the cases.csv file <br>
 
-│
-├── processed_data.csv            
+
+├── app.py                      # Main entry point with Gradio UI<br>
+├── requirements.txt             # List of dependencies<br>
+└── README.md                    # Project documentation<br>
+
+├── processed_data.csv          
 ├── cases.csv
 
   Key Components:
