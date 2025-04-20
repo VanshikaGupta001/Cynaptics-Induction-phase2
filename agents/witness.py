@@ -1,5 +1,5 @@
 from config.env import * 
-from base_agent import CourtroomAgent
+from agents.base_agent import CourtroomAgent
 import random
 from typing import List, Tuple
 
